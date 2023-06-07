@@ -1,0 +1,33 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+ background-color: #ffffff;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 60rpx;
+  padding-bottom: 6px;
+}
+
+.area {
+  margin-left: 32rpx;
+  width: 28rpx;
+  height: 32rpx;
+}
+
+.title_text {
+  margin-left: 6rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.return {
+  margin-left: 8rpx;
+  width: 28rpx;
+  height: 28rpx;
+}

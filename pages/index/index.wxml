@@ -1,0 +1,59 @@
+<NavTop></NavTop>
+<scroll-view scroll-y="true" style="width: 100vw;overflow: auto;height: 100vh;" bindscroll='touchTop'>
+  <view class="nav">
+    <view class="member_box">
+      <view class="member_top">
+        <image src="/image/member_card.png" mode="aspectFill" class="member_card" />
+        <view class="member_top_text">
+          次卡名称
+        </view>
+      </view>
+      <view class="member_mumber_text">
+        剩余 99次
+      </view>
+      <view class="member_content_text">
+        每次可兑换任意一份商品
+      </view>
+      <view class="member_bottom">
+        <text class="price">33</text>
+        <text class="price_text">.25/次</text>
+      </view>
+      <view class="member_buy">立即购买</view>
+      <image src="/image/member.png" mode="aspectFill" class="member_img" />
+    </view>
+  </view>
+  <view class="{{scrollTop > 180 ? 'nav_top_position' : 'nav_top'}}">
+    <view class="day_all_box">
+      <block wx:for="{{day}}" wx:key="index">
+        <view class="{{selectedIndex === index ? 'day_box_choose' : 'day_box'}}" data-index="{{index}}" bindtap="chooseDay">
+          <view>{{item.week}}</view>
+          <view>{{item.time}}</view>
+        </view>
+        <view class="day_bottom"></view>
+      </block>
+    </view>
+  </view>
+  <view class="content_box">
+    <block wx:for="{{commodity}}" wx:key="index">
+      <view class="food_box">
+        <image src="/image/food_one.jpg" mode="aspectFill" class="food_img" />
+        <view class="content_text">
+          <view class="food_title">
+            {{item.title}}
+          </view>
+          <view class="food_label">
+            <view class="label_choose">{{item.label_one}}</view>
+            <view class="label">{{item.label_two}}</view>
+            <view class="label">{{item.label_three}}</view>
+          </view>
+        </view>
+        <view class="content_bottom">
+          <view class="content_price">¥{{item.price}}</view>
+          <view class="content_convert">可用次卡兑换</view>
+          <view class="content_book">预订</view>
+        </view>
+      </view>
+    </block>
+    <view class="end">—— 到底啦 ——</view>
+  </view>
+</scroll-view>

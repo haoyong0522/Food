@@ -1,0 +1,11 @@
+<view class="nav">
+  <view style="height:{{navHeight}}px;"></view>
+  <view style="height:{{navTap}}px;"></view>
+  <view class="box">
+    <image src="/image/area.png" class="area" bindtap="returnFun"></image>
+    <view class="title_text">
+      店铺名称
+    </view>
+    <image src="/image/return.png" class="return" bindtap="returnFun"></image>
+  </view>
+</view>
